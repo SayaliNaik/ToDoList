@@ -1,7 +1,7 @@
 import React from "react";
 import ToDoItem from "./ToDoItem";
 
-const ToDoList = ({ toDoList }) => {
+const ToDoList = ({ toDoList, deleteTask }) => {
     return (
         <div>
             {toDoList.map((todo, id) => (
@@ -9,6 +9,7 @@ const ToDoList = ({ toDoList }) => {
                     key={id}
                     id={id}
                     todo={todo}
+                    deleteTask={deleteTask}
                 />
             ))}
         </div>

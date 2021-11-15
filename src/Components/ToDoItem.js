@@ -1,7 +1,7 @@
 import React from 'react';
 import { ToDo} from '../App.css.js';
 
-const ToDoItem = ({ todo }) => {
+const ToDoItem = ({ todo, id, deleteTask }) => {
     return (
         <ToDo>
             <input
@@ -9,6 +9,7 @@ const ToDoItem = ({ todo }) => {
             />
             <div>{todo.task}</div>
             <button
+                onClick={() => deleteTask(id)}
                 style={{marginLeft: "10px"}}
             >
                 X

@@ -16,12 +16,20 @@ function App() {
       setToDoList(newItem);
     };
 
+    const deleteTask = id => {
+      const newItem = [...toDoList];
+      newItem.splice(id,1);
+      setToDoList(newItem);
+    };
+  
+
     return (
         <div className="App">
             <Header />
             <ToDoForm addTask={addTask}/>
             <ToDoList 
                 toDoList={toDoList}
+                deleteTask={deleteTask}
             />
         </div>
     );
