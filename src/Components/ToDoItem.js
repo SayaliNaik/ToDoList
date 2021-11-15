@@ -1,13 +1,13 @@
 import React from 'react';
 import { ToDo} from '../App.css.js';
 
-const ToDoItem = () => {
+const ToDoItem = ({ todo }) => {
     return (
         <ToDo>
             <input
                 type="checkbox"
             />
-            <div></div>
+            <div>{todo.task}</div>
             <button
                 style={{marginLeft: "10px"}}
             >
