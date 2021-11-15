@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const ToDoForm = () => {
+const ToDoForm = ({ addTask }) => {
+
+const [ userInput, setUserInput ] = useState('');
+
+const handleChange = (e) => {
+    setUserInput(e.currentTarget.value)
+}
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (!userInput) return;
+      addTask(userInput);
+      setUserInput('');
+    };
+
     return (
-        <form>
-            <input type="text" style={{padding: "10px"}}/>
+        <form onSubmit={handleSubmit} >
+            <input type="text" value={userInput} onChange={handleChange} style={{padding: "10px"}}/>
             <button style={{padding: "10px"}}>ADD</button>
         </form>
     );
