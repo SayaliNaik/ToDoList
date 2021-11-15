@@ -1,13 +1,19 @@
 import React from 'react';
-import { ToDo} from '../App.css.js';
+import { ToDo } from '../App.css.js';
 
-const ToDoItem = ({ todo, id, deleteTask }) => {
+const ToDoItem = ({ todo, id, deleteTask, completeTask }) => {
+
     return (
         <ToDo>
             <input
                 type="checkbox"
+                onClick={() => completeTask(id)}
             />
-            <div>{todo.task}</div>
+            <div
+                style={{ textDecoration: todo.complete ? "line-through" : "" }}
+            >
+                {todo.task}
+            </div>
             <button
                 onClick={() => deleteTask(id)}
                 style={{marginLeft: "10px"}}

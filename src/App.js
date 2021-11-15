@@ -21,6 +21,12 @@ function App() {
       newItem.splice(id,1);
       setToDoList(newItem);
     };
+
+    const completeTask = (id) => {
+      const newItem = [...toDoList];
+      newItem[id].complete = true;
+      setToDoList(newItem);
+    };
   
 
     return (
@@ -30,6 +36,7 @@ function App() {
             <ToDoList 
                 toDoList={toDoList}
                 deleteTask={deleteTask}
+                completeTask={completeTask}
             />
         </div>
     );
