@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ToDo, Item } from '../App.css.js';
+import { ToDo, Item, Button } from '../App.css.js';
 
 const ToDoItem = ({ todo, id, deleteTask, completeTask }) => {
 
@@ -29,6 +29,8 @@ const ToDoItem = ({ todo, id, deleteTask, completeTask }) => {
             <input
                 type="checkbox"
                 onClick={() => completeTask(id)}
+                style={{ zoom: 2.5 }}
+                
             />
             <Item
                 key={id}
@@ -39,12 +41,11 @@ const ToDoItem = ({ todo, id, deleteTask, completeTask }) => {
                 onKeyDown={onKeyDown}
                 onBlur={onBlur}
             />
-            <button
+            <Button
                 onClick={() => deleteTask(id)}
-                style={{marginLeft: "10px"}}
             >
-                X
-            </button>
+                ✕
+            </Button>
 
             <br />
         </ToDo>
