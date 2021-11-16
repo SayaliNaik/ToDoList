@@ -24,7 +24,6 @@ const ToDoItem = ({ todo, id, deleteTask, completeTask }) => {
     };
 
     return (
-        <>
         <ToDo>
             <input
                 type="checkbox"
@@ -49,7 +48,6 @@ const ToDoItem = ({ todo, id, deleteTask, completeTask }) => {
 
             <br />
         </ToDo>
-        </>
     );
 };
 
