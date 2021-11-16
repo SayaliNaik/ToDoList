@@ -5,3 +5,14 @@ export const ToDo = styled.div`
     display: flex;
     justify-content: center;
 `;
+
+export const Item = styled.input`
+    background-color: transparent;
+    border: 0;
+    margin-left: 10px;
+    font-size: 16px;
+
+    &:hover {
+        cursor: pointer;
+    }
+`;

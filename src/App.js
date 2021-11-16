@@ -24,7 +24,7 @@ function App() {
 
     const completeTask = (id) => {
       const newItem = [...toDoList];
-      newItem[id].complete = true;
+      newItem[id].complete = !newItem[id].complete;
       setToDoList(newItem);
     };
   

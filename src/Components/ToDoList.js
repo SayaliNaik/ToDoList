@@ -6,6 +6,7 @@ const ToDoList = ({ toDoList, deleteTask, completeTask }) => {
         <div>
             {toDoList.map((todo, id) => (
                 <ToDoItem
+                    key={todo.task}
                     id={id}
                     todo={todo}
                     deleteTask={deleteTask}
