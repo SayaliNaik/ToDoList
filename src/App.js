@@ -12,7 +12,7 @@ function App() {
     const [ toDoList, setToDoList ] = useState(data);
 
     const addTask = (task) => {
-      const newItem = [...toDoList, { task }];
+      const newItem = [...toDoList, { id: Math.random(), task, complete: false }];
       setToDoList(newItem);
     };
 
@@ -27,7 +27,6 @@ function App() {
       newItem[id].complete = !newItem[id].complete;
       setToDoList(newItem);
     };
-  
 
     return (
         <div className="App">
