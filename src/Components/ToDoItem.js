@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ToDo, Item, Button } from '../App.css.js';
 
 const ToDoItem = ({ todo, id, deleteTask, completeTask }) => {
