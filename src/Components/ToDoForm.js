@@ -17,9 +17,15 @@ const ToDoForm = ({ addTask }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={userInput} onChange={handleChange} style={{ padding: '10px' }} />
-      <Button>ADD</Button>
+    <form onSubmit={handleSubmit} data-testid="form">
+      <input
+        type="text"
+        value={userInput}
+        onChange={handleChange}
+        style={{ padding: '10px' }}
+        data-testid="formInput"
+      />
+      <Button data-testid="add">ADD</Button>
     </form>
   );
 };

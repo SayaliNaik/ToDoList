@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
+    "@testing-library/jest-dom": "5.1.1",
+    "@testing-library/react": "9.4.0",
     "@testing-library/user-event": "12.6.3",
+    "@types/jest": "26.0.15",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
@@ -45,6 +46,6 @@
   "author": "sayalin <sayali.naik@trendmicro.com>",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "5.9.0"
+    "eslint": "7.32.0"
   }
 }
